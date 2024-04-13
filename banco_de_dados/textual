@@ -1,0 +1,11 @@
+estado(#uf, nome);
+cidade(#id, &uf_estado, nome);
+deposito(#id, nome, &cidade, bairro, cep, logradouro, numero_residencial);
+pessoa(#id, cpf, nome, sobrenome, data_nascimento, &cidade, bairro, cep, logradouro, numero_residencial);
+funcao(#id, nome, descricao);
+colaborador(#id, &id_pessoa, &id_funcao);
+solicitante(#id, &id_pessoa);
+parceiro(#id, cnpj, razao_social, nome_fantasia);
+condutor(#id, &id_pessoa, cnh);
+alimento_categoria(#id, nome, descricao);
+alimento(#id, &id_alimento_categoria, nome, descricao, data_validade);
