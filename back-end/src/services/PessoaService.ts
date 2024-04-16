@@ -1,7 +1,7 @@
 import PessoaRepository from '../repositories/PessoaRepository';
 import { PessoaCreateType, PessoaUpdateType } from '../types/pessoaTypes';
 
-export default class EstadoService {
+export default class PessoaService {
 
     static getAll() {
 

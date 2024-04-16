@@ -58,7 +58,7 @@ export default class PessoaRepository {
                 ddd = $10,
                 telefone = $11,
                 email = $12
-            WHERE id = $3 RETURNING *`,
+            WHERE id = $13 RETURNING *`,
             [
                 data.cpf,
                 data.nome,
