@@ -1,8 +1,8 @@
-export interface EstadoCreateType {
+export type EstadoCreateType = {
     uf: string;
     nome: string;
 }
 
-export interface EstadoUpdateType {
+export type EstadoUpdateType = {
     nome: string;
 }

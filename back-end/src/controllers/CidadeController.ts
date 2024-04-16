@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import CidadeService from '../services/CidadeService';
-import { number } from 'joi';
 
 export default class CidadeController {
 
