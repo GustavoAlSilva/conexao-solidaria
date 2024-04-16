@@ -1,7 +1,7 @@
 import SolicitanteRepository from '../repositories/SolicitanteRepository';
 import { SolicitanteCreateType, SolicitanteUpdateType } from '../types/solicitanteTypes';
 
-export default class EstadoService {
+export default class SolicitanteService {
 
     static getAll() {
 
