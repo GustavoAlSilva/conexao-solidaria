@@ -14,7 +14,7 @@ export default class CidadeController {
 
         const { params: { id } } = req;
 
-        const city = await CidadeService.getOne(id);
+        const city = await CidadeService.getOne(parseInt(id));
 
         if (city) {
 
@@ -36,7 +36,7 @@ export default class CidadeController {
 
         const { params: { id }, body } = req;
 
-        const city = await CidadeService.update(id, body);
+        const city = await CidadeService.update(parseInt(id), body);
 
         res.json(city);
     }
@@ -45,7 +45,7 @@ export default class CidadeController {
 
         const { params: { id } } = req;
 
-        await CidadeService.delete(id);
+        await CidadeService.delete(parseInt(id));
 
         res.status(204).send();
     }

@@ -1,4 +1,5 @@
 import CidadeRepository from '../repositories/CidadeRepository';
+import { CidadeCreateType, CidadeUpdateType } from '../types/cidadeTypes';
 
 export default class EstadoService {
 
@@ -7,22 +8,22 @@ export default class EstadoService {
         return CidadeRepository.getAll();
     }
 
-    static getOne(id: string) {
+    static getOne(id: number) {
 
         return CidadeRepository.getOne(id);
     }
 
-    static create(data: any) {
+    static create(data: CidadeCreateType) {
 
         return CidadeRepository.create(data);
     }
 
-    static update(id: string, data: any) {
+    static update(id: number, data: CidadeUpdateType) {
 
         return CidadeRepository.update(id, data);
     }
 
-    static delete(id: string) {
+    static delete(id: number) {
 
         return CidadeRepository.delete(id);
     }

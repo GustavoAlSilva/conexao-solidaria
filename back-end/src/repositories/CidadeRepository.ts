@@ -1,4 +1,5 @@
 import pool from '../config/database';
+import { CidadeCreateType, CidadeUpdateType } from '../types/cidadeTypes';
 
 export default class CidadeRepository {
 
@@ -9,21 +10,21 @@ export default class CidadeRepository {
         return res.rows;
     }
 
-    static async getOne(id: string) {
+    static async getOne(id: number) {
 
         const res = await pool.query('SELECT * FROM cidade WHERE id = $1', [id]);
 
         return res.rows[0];
     }
 
-    static async create(data: any) {
+    static async create(data: CidadeCreateType) {
 
         const res = await pool.query('INSERT INTO cidade (nome, uf_estado) VALUES ($1, $2) RETURNING *', [data.nome, data.uf_estado]);
 
         return res.rows[0];
     }
 
-    static async update(id: string, data: any) {
+    static async update(id: number, data: CidadeUpdateType) {
 
         const res = await pool.query(
             'UPDATE cidade SET nome = $1, uf_estado = $2 WHERE id = $3 RETURNING *',
@@ -33,7 +34,7 @@ export default class CidadeRepository {
         return res.rows[0];
     }
 
-    static async delete(id: string) {
+    static async delete(id: number) {
 
         await pool.query('DELETE FROM cidade WHERE id = $1', [id]);
     }
