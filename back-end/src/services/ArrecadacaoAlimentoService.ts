@@ -1,7 +1,7 @@
 import ArrecadacaoAlimentoRepository from '../repositories/ArrecadacaoAlimentoRepository';
 import { ArrecadacaoAlimentoCreateType, ArrecadacaoAlimentoUpdateType } from '../types/arrecadacaoAlimentoTypes';
 
-export default class EstadoService {
+export default class ArrecadacaoAlimentoService {
 
     static getAll() {
 

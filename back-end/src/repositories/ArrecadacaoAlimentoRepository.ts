@@ -5,14 +5,14 @@ export default class ArrecadacaoAlimentoRepository {
 
     static async getAll() {
 
-        const res = await pool.query('SELECT * FROM arrecadacaoAlimento');
+        const res = await pool.query('SELECT * FROM arrecadacao_alimento');
 
         return res.rows;
     }
 
     static async getOne(id: number) {
 
-        const res = await pool.query('SELECT * FROM arrecadacaoAlimento WHERE id = $1', [id]);
+        const res = await pool.query('SELECT * FROM arrecadacao_alimento WHERE id = $1', [id]);
 
         return res.rows[0];
     }
@@ -20,7 +20,7 @@ export default class ArrecadacaoAlimentoRepository {
     static async create(data: ArrecadacaoAlimentoCreateType) {
 
         const res = await pool.query(
-            `INSERT INTO arrecadacaoAlimento (id_alimento, data_validade, peso, id_pessoa, id_condutor, id_deposito)
+            `INSERT INTO arrecadacao_alimento (id_alimento, data_validade, peso, id_pessoa, id_condutor, id_deposito)
             VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING *`,
             [
@@ -39,7 +39,7 @@ export default class ArrecadacaoAlimentoRepository {
     static async update(id: number, data: ArrecadacaoAlimentoUpdateType) {
 
         const res = await pool.query(
-            `UPDATE arrecadacaoAlimento
+            `UPDATE arrecadacao_alimento
             SET id_alimento = $1,
                 data_validade = $2,
                 peso = $3,
@@ -63,6 +63,6 @@ export default class ArrecadacaoAlimentoRepository {
 
     static async delete(id: number) {
 
-        await pool.query('DELETE FROM arrecadacaoAlimento WHERE id = $1', [id]);
+        await pool.query('DELETE FROM arrecadacao_alimento WHERE id = $1', [id]);
     }
 }
