@@ -21,7 +21,7 @@ export default class CondutorController {
             res.json(conductor);
         } else {
 
-            res.status(404).send('Condutor não encontrada');
+            res.status(404).send('Condutor não encontrado');
         }
     }
 

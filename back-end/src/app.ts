@@ -5,6 +5,7 @@ import cidadeRoutes from './routes/cidadeRoutes';
 import pessoaRoutes from './routes/pessoaRoutes';
 import solicitanteRoutes from './routes/solicitanteRoutes';
 import condutorRoutes from './routes/condutorRoutes';
+import depositoRoutes from './routes/depositoRoutes';
 
 const app = express();
 const port = 3000;
@@ -16,6 +17,7 @@ app.use('/cidade', cidadeRoutes);
 app.use('/pessoa', pessoaRoutes);
 app.use('/solicitante', solicitanteRoutes);
 app.use('/condutor', condutorRoutes);
+app.use('/deposito', depositoRoutes);
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);

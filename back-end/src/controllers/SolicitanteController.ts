@@ -21,7 +21,7 @@ export default class SolicitanteController {
             res.json(requester);
         } else {
 
-            res.status(404).send('Solicitante não encontrada');
+            res.status(404).send('Solicitante não encontrado');
         }
     }
 
