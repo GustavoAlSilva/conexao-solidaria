@@ -9,6 +9,7 @@ import depositoRoutes from './routes/depositoRoutes';
 import alimentoRoutes from './routes/alimentoRoutes';
 import arrecadacaoAlimentoRoutes from './routes/arrecadacaoAlimentoRoutes';
 import estoqueAlimentoRoutes from './routes/estoqueAlimentoRoutes';
+import doacaoAlimentoRoutes from './routes/doacaoAlimentoRoutes';
 
 const app = express();
 const port = 3000;
@@ -24,6 +25,7 @@ app.use('/deposito', depositoRoutes);
 app.use('/alimento', alimentoRoutes);
 app.use('/arrecadacaoAlimento', arrecadacaoAlimentoRoutes);
 app.use('/estoqueAlimento', estoqueAlimentoRoutes);
+app.use('/doacaoAlimento', doacaoAlimentoRoutes);
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
